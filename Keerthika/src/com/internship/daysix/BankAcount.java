@@ -1,4 +1,4 @@
-package com.internship.daysix;
+ package com.internship.daysix;
 
 public class BankAcount {
 	private int accno;
@@ -6,6 +6,9 @@ public class BankAcount {
 	public BankAcount(int accno, double initialBalance)  {
 		this.accno=accno;
 		this.balance=initialBalance;
+	}
+	public BankAcount() {
+		// TODO Auto-generated constructor stub
 	}
 	public void deposit(double amount)throws InvalidAmountException {
 		if(amount<=0) {
@@ -29,7 +32,7 @@ public class BankAcount {
 				System.out.println("current balance:"+balance);
 			}
 		public static void main(String[] args) {
-			BankAccount account=new BankAccount();
+			BankAcount account = new BankAcount();
 			try {
 				account.deposit(500);
 				account.withdraw(300);
